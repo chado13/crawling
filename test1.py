@@ -36,9 +36,16 @@ def get_daily_price(code,fromdate=None,todate=None):
     return df
 
 
-df = get_daily_price('KR7005930003')
-# df = df.loc[:,['년/월/일','시가','고가','저가','종가','거래량(주)']]
-# df.columns = ['date','open','high','low','close','volume']
-# df.set_index('date',inplace=True)
-print(df)
+# df = get_daily_price('KR7005930003')
+# # df = df.loc[:,['년/월/일','시가','고가','저가','종가','거래량(주)']]
+# # df.columns = ['date','open','high','low','close','volume']
+# # df.set_index('date',inplace=True)
+# print(df)
 
+
+a=0
+
+while a == 20:
+    a = a+1
+    b=a+a        
+    print(a,b)

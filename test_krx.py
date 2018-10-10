@@ -69,7 +69,7 @@ def get_markets_short(market,start_date=None, end_date=None):
         'end_dd':end_date,
         'pagePath':'/contents/SRT/02/02020100/SRT02020100.jsp',
     }
-    print(gen_otp_data)
+    
     r = requests.post(gen_otp_url, gen_otp_data)
     code = r.content
 

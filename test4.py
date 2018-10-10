@@ -72,16 +72,17 @@ def get_krx_stock_master():
     return df
 
 df_master = get_krx_stock_master()
+print(df_master.head())
 
-
-con = sqlite3.connect("database.db")
+con = sqlite3.connect("krx_stock_code.db")
 cur = con.cursor()
 # table = """ CREATE TABLE krx_stocks_master (code text, name text, sector_code text, sector text)"""
 # cur.execute(table)
 
-inser_update_sql="""INSERT INTO krx_stocks_master VALUES(?,?,?,?)"""
+inser_update_sql="""INSERT INTO stock_code VALUES(?,?,?,?)"""
 
 for idx, r in df_master.iterrows():
+
     cur.execute(inser_update_sql,r)
 
 con.commit()
